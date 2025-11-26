@@ -857,6 +857,7 @@ Unless noted, posts are under <a target="_blank" rel="noopener" href="https://cr
     let restoreTimer;
     document.addEventListener('visibilitychange', () => {
       if (document.hidden) {
+        clearTimeout(restoreTimer);
         document.title = hiddenTitle;
       } else {
         document.title = backTitle;
